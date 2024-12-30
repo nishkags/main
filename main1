@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        String groceries = "apples, bananas";
+ Scanner scanner = new Scanner(System.in);
+System.out.println("Do you want apples or bananas?");
+
+while (groceries.length() >= 0) {
+        String input = scanner.nextLine();
+int sub1 = groceries.indexOf("apples"); 
+int sub2 = groceries.indexOf("bananas");
+String apples = groceries.substring(sub1, sub2 - 2);
+String bananas = groceries.substring(sub2);
+if (input == "bananas") {
+double bananasprice = 4.00;
+System.out.println(bananas + "cost" + bananasprice);}
+else if (input == "apples"){
+double applesprice = 5.60;
+System.out.println(apples + "cost" + applesprice);}
+else if (input == "apples and bananas"){
+double bananasprice = 4.00;
+double applesprice = 5.60;
+System.out.println("total cost is" + applesprice + bananasprice);}
+}
+}
+}
